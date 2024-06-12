@@ -1,0 +1,12 @@
+{
+    "recommendations": [
+        "denoland.vscode-deno",
+        "dbaeumer.vscode-eslint",
+        "bradlc.vscode-tailwindcss",
+        "austenc.tailwind-docs",
+        "stivo.tailwind-fold",
+        "bourhaouta.tailwindshades",
+        "github.vscode-pull-request-github",
+        "github.vscode-github-actions"
+    ]
+}
