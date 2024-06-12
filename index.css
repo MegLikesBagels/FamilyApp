@@ -1,0 +1,83 @@
+/* A gay ass reset */
+
+*,
+*:before,
+*:after {
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 100% / 16px;
+}
+
+body {
+    margin: 0;
+}
+
+a[role="button"],button {
+    appearance: none;
+    cursor: pointer;
+}
+
+h1,h2,h3,h4,h5,h6,p,button{
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-block-start: .5rem;
+    margin-block-end: .5rem;
+}
+
+ul[role="menu"],li[role="menuitem"],ol[role="menuitem"] {
+    list-style: none;
+}
+
+/* The actual styling */
+
+*,
+*:before,
+*:after {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
+}
+
+body {
+    width: 100%;
+    max-width: 100vw;
+    min-height: 100vh;
+}
+
+#main-content section {
+    display: flex;
+    flex-direction: column;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    background: #034f06;
+    color: white;
+}
+
+#main-content section h3,
+#main-content section button {
+    display: flex;
+}
+
+#main-content section h3 {
+    font-size: 5rem;
+    margin: 0;
+}
+
+#main-content section button {
+    max-width: 9rem;
+    padding: 1rem .5rem;
+    background: #52a655;
+    border: .0625rem solid #378038;
+    border-radius: .25rem;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    transition: all ease-in-out .2s;
+}
+
+#main-content section button:hover {
+    background: #47974a;
+}

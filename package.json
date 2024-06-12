@@ -1,0 +1,33 @@
+{
+  "name": "family-vote",
+  "version": "0.0.1",
+  "description": "family voting app init",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MegLikesBagels/FamilyApp.git"
+  },
+  "keywords": [
+    "typescript",
+    "javascript",
+    "family",
+    "automaiton",
+    "voting",
+    "iot",
+    "raspberrypi"
+  ],
+  "author": "Megan Barrett-Pender",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MegLikesBagels/FamilyApp/issues"
+  },
+  "homepage": "https://github.com/MegLikesBagels/FamilyApp#readme",
+  "dependencies": {
+    "postcss": "^8.4.38",
+    "tailwindcss": "^3.4.4",
+    "typescript": "^5.4.5"
+  }
+}
