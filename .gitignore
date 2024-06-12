@@ -1,3 +1,6 @@
 npm_modules/
 .git/
 .hidden/
+
+# Hide stupid macos stuff
+.DS_Store
