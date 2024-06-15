@@ -15,19 +15,31 @@ body {
     margin: 0;
 }
 
-a[role="button"],button {
+a[role="button"],
+button {
     appearance: none;
     cursor: pointer;
 }
 
-h1,h2,h3,h4,h5,h6,p,button{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+button,
+ul,
+ol {
     margin-top: 0;
     margin-bottom: 0;
-    margin-block-start: .5rem;
-    margin-block-end: .5rem;
+    margin-block-start: 0.5rem;
+    margin-block-end: 0.5rem;
 }
 
-ul[role="menu"],li[role="menuitem"],ol[role="menuitem"] {
+ul[role="menu"],
+li[role="menuitem"],
+ol[role="menuitem"] {
     list-style: none;
 }
 
@@ -36,48 +48,49 @@ ul[role="menu"],li[role="menuitem"],ol[role="menuitem"] {
 *,
 *:before,
 *:after {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 body {
+    display: flex;
+    flex-direction: column;
     width: 100%;
     max-width: 100vw;
     min-height: 100vh;
 }
 
-#main-content section {
+/* Megan */
+
+main {
     display: flex;
     flex-direction: column;
-    padding-top: 10rem;
-    padding-bottom: 10rem;
-    padding-left: 5rem;
-    padding-right: 5rem;
-    background: #034f06;
-    color: white;
 }
 
-#main-content section h3,
-#main-content section button {
+#main-header {
     display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    flex-shrink: 0;
+    background-color: cornflowerblue;
+    width: 100%;
+    height: 96px;
 }
 
-#main-content section h3 {
-    font-size: 5rem;
+#main-header nav {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    flex-shrink: 0;
+    width: 100%;
+}
+
+#main-header nav > * {
+    flex-grow: 1;
+    flex-shrink: 0;
+}
+
+#main-header ul {
+    list-style: none;
     margin: 0;
-}
-
-#main-content section button {
-    max-width: 9rem;
-    padding: 1rem .5rem;
-    background: #52a655;
-    border: .0625rem solid #378038;
-    border-radius: .25rem;
-    color: white;
-    justify-content: center;
-    align-items: center;
-    transition: all ease-in-out .2s;
-}
-
-#main-content section button:hover {
-    background: #47974a;
+    padding: 0;
 }
