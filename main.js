@@ -5,9 +5,12 @@ const host = "localhost";
 
 const requestListener = function (req, res) {
 
-    switch ( req.url ) {
+    switch (req.url) {
         case "/":
             doReadFile("index.html");
+            break;
+        case "/reset.css":
+            doReadFile("reset.css", "text/css");
             break;
         case "/index.css":
             doReadFile("index.css", "text/css");
@@ -17,17 +20,32 @@ const requestListener = function (req, res) {
             break;
     }
 
-    function doReadFile(readWhat, encoding = "text/html") {
+    function prettyConsole ( ...params ) {
 
-        fs.readFile(`${__dirname}/${readWhat}`)
+        let currentDate = new Date();
+        let hours = currentDate.getUTCHours();
+        let minutes = currentDate.getUTCMinutes();
+        let seconds = currentDate.getUTCSeconds();
+        let tag = `[${hours}:${minutes}:${seconds}]`;
+
+        return console.log.apply(console, [tag, ...params])
+
+    }
+
+    function doReadFile(readWhat, encoding = "text/html", assetFolder = "public") {
+
+        
+
+        fs.readFile(`${__dirname}/${assetFolder}/${readWhat}`)
         .then(contents => {
             res.setHeader("Content-Type", encoding);
             res.writeHead(200);
-            console.log("200 OK: reading ", readWhat)
+            prettyConsole("[200 OK!]", readWhat);
             res.end(contents);
         })
         .catch(err => {
             res.writeHead(500);
+            prettyConsole("[500 Error!]", err);
             res.end(err);
             return;
         });
